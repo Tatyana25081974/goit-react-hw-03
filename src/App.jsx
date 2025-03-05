@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
+import ContactForm from "./components/ContactForm/ContactForm";
 import css from './App.module.css'
 
 
@@ -14,6 +15,14 @@ export default function App() {
   ]);
   const [filter, setFilter] = useState("");
 
+  const addContact = (newContact) => {
+    setContacts((prevContacts) => [...prevContacts, newContact]);
+  };
+
+  const deleteContact = (id) => {
+    setContacts((prevConacts) => prevConacts.filter(contact => contact.id !== id));
+  };
+
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
@@ -21,8 +30,9 @@ export default function App() {
   return (
     <div className={css.container}>
       <h1>Phonebook</h1>
+      <ContactForm onAdd={addContact} />
       <SearchBox filter={filter} setFilter={setFilter} />
-      <ContactList contacts={filteredContacts} />
+      <ContactList contacts={filteredContacts} onDelete={deleteContact} />
     </div>
   );
 }
