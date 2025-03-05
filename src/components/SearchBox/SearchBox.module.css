@@ -1,0 +1,26 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    /* Темно-сірий колір тексту */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    /* Синій колір при фокусі */
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+    /* Світіння при фокусі */
+    outline: none;
+}

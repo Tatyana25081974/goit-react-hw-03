@@ -1,0 +1,50 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.number {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    color: #000;
+    font-size: 18px;
+}
+
+.deleteBtn {
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #bbb;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
